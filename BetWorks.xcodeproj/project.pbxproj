@@ -14,6 +14,9 @@
 		1F9DE61125A523AE0009B62C /* BetWorksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9DE61025A523AE0009B62C /* BetWorksTests.swift */; };
 		1F9DE61C25A523AE0009B62C /* BetWorksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9DE61B25A523AE0009B62C /* BetWorksUITests.swift */; };
 		1F9DE63025A58A1F0009B62C /* LoginTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9DE62F25A58A1F0009B62C /* LoginTextFieldView.swift */; };
+		1F9DE63825A58C4D0009B62C /* GenericTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9DE63725A58C4D0009B62C /* GenericTextView.swift */; };
+		1F9DE64025A58D390009B62C /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9DE63F25A58D390009B62C /* LoginButton.swift */; };
+		1F9DE64A25A58DF00009B62C /* WelcomeBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9DE64925A58DF00009B62C /* WelcomeBackView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		1F9DE61B25A523AE0009B62C /* BetWorksUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetWorksUITests.swift; sourceTree = "<group>"; };
 		1F9DE61D25A523AE0009B62C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F9DE62F25A58A1F0009B62C /* LoginTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTextFieldView.swift; sourceTree = "<group>"; };
+		1F9DE63725A58C4D0009B62C /* GenericTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericTextView.swift; sourceTree = "<group>"; };
+		1F9DE63F25A58D390009B62C /* LoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
+		1F9DE64925A58DF00009B62C /* WelcomeBackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeBackView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,9 +103,9 @@
 		1F9DE5FD25A523AB0009B62C /* BetWorks */ = {
 			isa = PBXGroup;
 			children = (
+				1F9DE64725A58DA20009B62C /* Login */,
+				1F9DE64825A58DAD0009B62C /* WelcomeBack */,
 				1F9DE5FE25A523AB0009B62C /* BetWorksApp.swift */,
-				1F9DE60025A523AB0009B62C /* LoginView.swift */,
-				1F9DE62F25A58A1F0009B62C /* LoginTextFieldView.swift */,
 				1F9DE60225A523AE0009B62C /* Assets.xcassets */,
 				1F9DE60725A523AE0009B62C /* Info.plist */,
 				1F9DE60425A523AE0009B62C /* Preview Content */,
@@ -131,6 +137,25 @@
 				1F9DE61D25A523AE0009B62C /* Info.plist */,
 			);
 			path = BetWorksUITests;
+			sourceTree = "<group>";
+		};
+		1F9DE64725A58DA20009B62C /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				1F9DE60025A523AB0009B62C /* LoginView.swift */,
+				1F9DE62F25A58A1F0009B62C /* LoginTextFieldView.swift */,
+				1F9DE63725A58C4D0009B62C /* GenericTextView.swift */,
+				1F9DE63F25A58D390009B62C /* LoginButton.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		1F9DE64825A58DAD0009B62C /* WelcomeBack */ = {
+			isa = PBXGroup;
+			children = (
+				1F9DE64925A58DF00009B62C /* WelcomeBackView.swift */,
+			);
+			path = WelcomeBack;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,9 +287,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F9DE64A25A58DF00009B62C /* WelcomeBackView.swift in Sources */,
+				1F9DE64025A58D390009B62C /* LoginButton.swift in Sources */,
 				1F9DE63025A58A1F0009B62C /* LoginTextFieldView.swift in Sources */,
 				1F9DE60125A523AB0009B62C /* LoginView.swift in Sources */,
 				1F9DE5FF25A523AB0009B62C /* BetWorksApp.swift in Sources */,
+				1F9DE63825A58C4D0009B62C /* GenericTextView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,6 +10,7 @@ import SwiftUI
 struct LoginTextFieldView: View {
 
 	@State var textFieldValue: String
+	var textFieldPlaceholderText: String
 
 	var body: some View {
 		ZStack(alignment: .leading) {
@@ -18,13 +19,15 @@ struct LoginTextFieldView: View {
 				.padding()
 
 			if textFieldValue.isEmpty {
-				Text("Username")
+				Text(textFieldPlaceholderText)
 					.foregroundColor(.black)
 					.padding()
 					.padding([.leading, .trailing], 10)
 					.font(Font.system(size: 20, design: .default))
 			}
 			TextField("", text: $textFieldValue)
+				.padding()
+				.padding([.leading, .trailing], 10)
 				.font(Font.system(size: 20, design: .default))
 		}.aspectRatio(4.0, contentMode: .fit)
 	}
