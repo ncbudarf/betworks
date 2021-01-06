@@ -18,6 +18,10 @@
 		1F9DE64025A58D390009B62C /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9DE63F25A58D390009B62C /* LoginButton.swift */; };
 		1F9DE64A25A58DF00009B62C /* WelcomeBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9DE64925A58DF00009B62C /* WelcomeBackView.swift */; };
 		1F9DE65925A633FB0009B62C /* MockNetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9DE65825A633FB0009B62C /* MockNetworkLayer.swift */; };
+		1F9DE65E25A667940009B62C /* WelcomeBackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9DE65D25A667940009B62C /* WelcomeBackViewModel.swift */; };
+		1F9DE66325A668580009B62C /* LoginVewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9DE66225A668580009B62C /* LoginVewModel.swift */; };
+		1F9DE66F25A6779D0009B62C /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9DE66E25A6779D0009B62C /* LoginResponse.swift */; };
+		1F9DE67425A677D70009B62C /* UsernameSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9DE67325A677D70009B62C /* UsernameSingleton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +59,10 @@
 		1F9DE63F25A58D390009B62C /* LoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
 		1F9DE64925A58DF00009B62C /* WelcomeBackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeBackView.swift; sourceTree = "<group>"; };
 		1F9DE65825A633FB0009B62C /* MockNetworkLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkLayer.swift; sourceTree = "<group>"; };
+		1F9DE65D25A667940009B62C /* WelcomeBackViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeBackViewModel.swift; sourceTree = "<group>"; };
+		1F9DE66225A668580009B62C /* LoginVewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVewModel.swift; sourceTree = "<group>"; };
+		1F9DE66E25A6779D0009B62C /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
+		1F9DE67325A677D70009B62C /* UsernameSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsernameSingleton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +119,7 @@
 				1F9DE5FE25A523AB0009B62C /* BetWorksApp.swift */,
 				1F9DE60225A523AE0009B62C /* Assets.xcassets */,
 				1F9DE60725A523AE0009B62C /* Info.plist */,
+				1F9DE67825A677F20009B62C /* Ignore */,
 				1F9DE60425A523AE0009B62C /* Preview Content */,
 			);
 			path = BetWorks;
@@ -146,9 +155,9 @@
 			isa = PBXGroup;
 			children = (
 				1F9DE60025A523AB0009B62C /* LoginView.swift */,
-				1F9DE62F25A58A1F0009B62C /* LoginTextFieldView.swift */,
 				1F9DE63725A58C4D0009B62C /* GenericTextView.swift */,
-				1F9DE63F25A58D390009B62C /* LoginButton.swift */,
+				1F9DE66225A668580009B62C /* LoginVewModel.swift */,
+				1F9DE67325A677D70009B62C /* UsernameSingleton.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -157,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				1F9DE64925A58DF00009B62C /* WelcomeBackView.swift */,
+				1F9DE65D25A667940009B62C /* WelcomeBackViewModel.swift */,
 			);
 			path = WelcomeBack;
 			sourceTree = "<group>";
@@ -165,8 +175,18 @@
 			isa = PBXGroup;
 			children = (
 				1F9DE65825A633FB0009B62C /* MockNetworkLayer.swift */,
+				1F9DE66E25A6779D0009B62C /* LoginResponse.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		1F9DE67825A677F20009B62C /* Ignore */ = {
+			isa = PBXGroup;
+			children = (
+				1F9DE62F25A58A1F0009B62C /* LoginTextFieldView.swift */,
+				1F9DE63F25A58D390009B62C /* LoginButton.swift */,
+			);
+			path = Ignore;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,11 +319,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F9DE64A25A58DF00009B62C /* WelcomeBackView.swift in Sources */,
+				1F9DE67425A677D70009B62C /* UsernameSingleton.swift in Sources */,
 				1F9DE64025A58D390009B62C /* LoginButton.swift in Sources */,
 				1F9DE63025A58A1F0009B62C /* LoginTextFieldView.swift in Sources */,
 				1F9DE60125A523AB0009B62C /* LoginView.swift in Sources */,
+				1F9DE66F25A6779D0009B62C /* LoginResponse.swift in Sources */,
 				1F9DE5FF25A523AB0009B62C /* BetWorksApp.swift in Sources */,
+				1F9DE66325A668580009B62C /* LoginVewModel.swift in Sources */,
 				1F9DE65925A633FB0009B62C /* MockNetworkLayer.swift in Sources */,
+				1F9DE65E25A667940009B62C /* WelcomeBackViewModel.swift in Sources */,
 				1F9DE63825A58C4D0009B62C /* GenericTextView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

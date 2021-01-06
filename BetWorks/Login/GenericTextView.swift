@@ -14,6 +14,6 @@ struct GenericTextView: View {
 	var body: some View {
 		Text(text)
 			.fontWeight(.semibold)
-			.padding(.bottom, 20)
+			.padding(.bottom, ViewPaddingValues.twentyPoints.rawValue)
 	}
 }

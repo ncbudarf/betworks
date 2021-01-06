@@ -7,13 +7,6 @@
 
 import Foundation
 
-//{isSuccessful: Bool, username: String}
-
-struct LoginResponse: Decodable {
-	let isSuccessful: Bool
-	let username: String
-}
-
 final class MockNetworkLayer {
 	func validateLogin(_ username: String, _ password: String) ->  LoginResponse {
 		let jsonData = JSONResponse(username, password).data(using: .utf8)!
