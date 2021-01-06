@@ -60,7 +60,7 @@ struct LoginView: View {
 							.padding([.leading, .trailing], ViewPaddingValues.tenPoints.rawValue)
 							.font(Font.system(size: ViewPaddingValues.twentyPoints.rawValue, design: .default))
 					}
-					TextField("", text: $loginVewModel.password)
+					SecureField("", text: $loginVewModel.password)
 						.padding()
 						.padding([.leading, .trailing], ViewPaddingValues.tenPoints.rawValue)
 						.font(Font.system(size: ViewPaddingValues.twentyPoints.rawValue, design: .default))

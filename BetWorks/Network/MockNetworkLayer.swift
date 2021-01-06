@@ -15,7 +15,7 @@ final class MockNetworkLayer {
 	}
 
 	private func JSONResponse(_ username: String, _ password: String) -> String {
-		let isSuccessful = validate(input: username) && validate(input: username)
+		let isSuccessful = validate(input: username) && validate(input: password)
 
 		let response = """
 		{
@@ -23,12 +23,11 @@ final class MockNetworkLayer {
 			"username": "\(username)",
 		}
 		"""
-		print(response)
 		return response
 	}
 
 	private func validate(input: String) -> Bool {
-		guard input.count > 2,
+		guard input.count >= 2,
 			  input.rangeOfCharacter(from: NSCharacterSet.letters) != nil,
 			  input.rangeOfCharacter(from: CharacterSet.decimalDigits) != nil
 		else {
