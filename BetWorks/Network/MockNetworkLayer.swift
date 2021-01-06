@@ -14,11 +14,11 @@ struct LoginResponse: Decodable {
 	let username: String
 }
 
-private final class MockNetworkLayer {
-	func validateLogin(username: String, password: String) ->  LoginResponse {
+final class MockNetworkLayer {
+	func validateLogin(_ username: String, _ password: String) ->  LoginResponse {
 		let jsonData = JSONResponse(username, password).data(using: .utf8)!
-		let blogPost: LoginResponse = try! JSONDecoder().decode(LoginResponse.self, from: jsonData)
-		return blogPost
+		let loginResponse: LoginResponse = try! JSONDecoder().decode(LoginResponse.self, from: jsonData)
+		return loginResponse
 	}
 
 	private func JSONResponse(_ username: String, _ password: String) -> String {
@@ -27,10 +27,10 @@ private final class MockNetworkLayer {
 		let response = """
 		{
 			"isSuccessful": \(isSuccessful),
-			"username": \(username),
+			"username": "\(username)",
 		}
 		"""
-
+		print(response)
 		return response
 	}
 

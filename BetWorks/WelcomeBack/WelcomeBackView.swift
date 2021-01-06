@@ -9,14 +9,12 @@ import SwiftUI
 
 struct WelcomeBackView: View {
 
-	@State var username: String
-
 	var body: some View {
 		NavigationView {
 			VStack {
 				GenericTextView(text: "Welcome Back")
 
-				GenericTextView(text: username)
+				GenericTextView(text: UsernameSingleton.shared.username)
 
 				Spacer()
 			}.padding()
@@ -28,6 +26,6 @@ struct WelcomeBackView: View {
 
 struct WelcomeBackView_Previews: PreviewProvider {
 	static var previews: some View {
-		WelcomeBackView(username: "*USERNAME*")
+		WelcomeBackView()
 	}
 }
