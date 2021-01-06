@@ -17,6 +17,7 @@
 		1F9DE63825A58C4D0009B62C /* GenericTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9DE63725A58C4D0009B62C /* GenericTextView.swift */; };
 		1F9DE64025A58D390009B62C /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9DE63F25A58D390009B62C /* LoginButton.swift */; };
 		1F9DE64A25A58DF00009B62C /* WelcomeBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9DE64925A58DF00009B62C /* WelcomeBackView.swift */; };
+		1F9DE65925A633FB0009B62C /* MockNetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9DE65825A633FB0009B62C /* MockNetworkLayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		1F9DE63725A58C4D0009B62C /* GenericTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericTextView.swift; sourceTree = "<group>"; };
 		1F9DE63F25A58D390009B62C /* LoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
 		1F9DE64925A58DF00009B62C /* WelcomeBackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeBackView.swift; sourceTree = "<group>"; };
+		1F9DE65825A633FB0009B62C /* MockNetworkLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkLayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 		1F9DE5FD25A523AB0009B62C /* BetWorks */ = {
 			isa = PBXGroup;
 			children = (
+				1F9DE65725A633DA0009B62C /* Network */,
 				1F9DE64725A58DA20009B62C /* Login */,
 				1F9DE64825A58DAD0009B62C /* WelcomeBack */,
 				1F9DE5FE25A523AB0009B62C /* BetWorksApp.swift */,
@@ -156,6 +159,14 @@
 				1F9DE64925A58DF00009B62C /* WelcomeBackView.swift */,
 			);
 			path = WelcomeBack;
+			sourceTree = "<group>";
+		};
+		1F9DE65725A633DA0009B62C /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				1F9DE65825A633FB0009B62C /* MockNetworkLayer.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,6 +303,7 @@
 				1F9DE63025A58A1F0009B62C /* LoginTextFieldView.swift in Sources */,
 				1F9DE60125A523AB0009B62C /* LoginView.swift in Sources */,
 				1F9DE5FF25A523AB0009B62C /* BetWorksApp.swift in Sources */,
+				1F9DE65925A633FB0009B62C /* MockNetworkLayer.swift in Sources */,
 				1F9DE63825A58C4D0009B62C /* GenericTextView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
