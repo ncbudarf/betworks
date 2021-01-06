@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		1F9DE5FF25A523AB0009B62C /* BetWorksApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9DE5FE25A523AB0009B62C /* BetWorksApp.swift */; };
-		1F9DE60125A523AB0009B62C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9DE60025A523AB0009B62C /* ContentView.swift */; };
+		1F9DE60125A523AB0009B62C /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9DE60025A523AB0009B62C /* LoginView.swift */; };
 		1F9DE60325A523AE0009B62C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F9DE60225A523AE0009B62C /* Assets.xcassets */; };
 		1F9DE60625A523AE0009B62C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F9DE60525A523AE0009B62C /* Preview Assets.xcassets */; };
 		1F9DE61125A523AE0009B62C /* BetWorksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9DE61025A523AE0009B62C /* BetWorksTests.swift */; };
 		1F9DE61C25A523AE0009B62C /* BetWorksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9DE61B25A523AE0009B62C /* BetWorksUITests.swift */; };
+		1F9DE63025A58A1F0009B62C /* LoginTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9DE62F25A58A1F0009B62C /* LoginTextFieldView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +36,7 @@
 /* Begin PBXFileReference section */
 		1F9DE5FB25A523AB0009B62C /* BetWorks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BetWorks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F9DE5FE25A523AB0009B62C /* BetWorksApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetWorksApp.swift; sourceTree = "<group>"; };
-		1F9DE60025A523AB0009B62C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		1F9DE60025A523AB0009B62C /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		1F9DE60225A523AE0009B62C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1F9DE60525A523AE0009B62C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1F9DE60725A523AE0009B62C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -45,6 +46,7 @@
 		1F9DE61725A523AE0009B62C /* BetWorksUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BetWorksUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F9DE61B25A523AE0009B62C /* BetWorksUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetWorksUITests.swift; sourceTree = "<group>"; };
 		1F9DE61D25A523AE0009B62C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F9DE62F25A58A1F0009B62C /* LoginTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTextFieldView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +98,8 @@
 			isa = PBXGroup;
 			children = (
 				1F9DE5FE25A523AB0009B62C /* BetWorksApp.swift */,
-				1F9DE60025A523AB0009B62C /* ContentView.swift */,
+				1F9DE60025A523AB0009B62C /* LoginView.swift */,
+				1F9DE62F25A58A1F0009B62C /* LoginTextFieldView.swift */,
 				1F9DE60225A523AE0009B62C /* Assets.xcassets */,
 				1F9DE60725A523AE0009B62C /* Info.plist */,
 				1F9DE60425A523AE0009B62C /* Preview Content */,
@@ -259,7 +262,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F9DE60125A523AB0009B62C /* ContentView.swift in Sources */,
+				1F9DE63025A58A1F0009B62C /* LoginTextFieldView.swift in Sources */,
+				1F9DE60125A523AB0009B62C /* LoginView.swift in Sources */,
 				1F9DE5FF25A523AB0009B62C /* BetWorksApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
