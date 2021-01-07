@@ -51,7 +51,7 @@ class LoginViewModel: ObservableObject {
 		})
 	}
 
-	private func validate(input: String) -> Bool {
+	func validate(input: String) -> Bool {
 		guard input.count >= 2,
 			  input.rangeOfCharacter(from: NSCharacterSet.letters) != nil,
 			  input.rangeOfCharacter(from: CharacterSet.decimalDigits) != nil

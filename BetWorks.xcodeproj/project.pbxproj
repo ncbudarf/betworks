@@ -10,7 +10,7 @@
 		1F9DE5FF25A523AB0009B62C /* BetWorksApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9DE5FE25A523AB0009B62C /* BetWorksApp.swift */; };
 		1F9DE60325A523AE0009B62C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F9DE60225A523AE0009B62C /* Assets.xcassets */; };
 		1F9DE60625A523AE0009B62C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F9DE60525A523AE0009B62C /* Preview Assets.xcassets */; };
-		1F9DE61125A523AE0009B62C /* BetWorksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9DE61025A523AE0009B62C /* BetWorksTests.swift */; };
+		1F9DE61125A523AE0009B62C /* LoginViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9DE61025A523AE0009B62C /* LoginViewModelTests.swift */; };
 		1F9DE61C25A523AE0009B62C /* LoginViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9DE61B25A523AE0009B62C /* LoginViewUITests.swift */; };
 		1F9DE63025A58A1F0009B62C /* LoginTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9DE62F25A58A1F0009B62C /* LoginTextFieldView.swift */; };
 		1F9DE63825A58C4D0009B62C /* GenericTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9DE63725A58C4D0009B62C /* GenericTextView.swift */; };
@@ -22,7 +22,6 @@
 		1F9DE66F25A6779D0009B62C /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9DE66E25A6779D0009B62C /* LoginResponse.swift */; };
 		1F9DE67425A677D70009B62C /* UsernameSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9DE67325A677D70009B62C /* UsernameSingleton.swift */; };
 		1F9DE69925A68CB70009B62C /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9DE60025A523AB0009B62C /* LoginView.swift */; };
-		1F9DE6A125A68EFD0009B62C /* WelcomeViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9DE6A025A68EFD0009B62C /* WelcomeViewUITests.swift */; };
 		1F9DE6A925A775D50009B62C /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9DE6A825A775D50009B62C /* Dependencies.swift */; };
 /* End PBXBuildFile section */
 
@@ -51,7 +50,7 @@
 		1F9DE60525A523AE0009B62C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1F9DE60725A523AE0009B62C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F9DE60C25A523AE0009B62C /* BetWorksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BetWorksTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1F9DE61025A523AE0009B62C /* BetWorksTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetWorksTests.swift; sourceTree = "<group>"; };
+		1F9DE61025A523AE0009B62C /* LoginViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelTests.swift; sourceTree = "<group>"; };
 		1F9DE61225A523AE0009B62C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F9DE61725A523AE0009B62C /* BetWorksUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BetWorksUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F9DE61B25A523AE0009B62C /* LoginViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewUITests.swift; sourceTree = "<group>"; };
@@ -65,7 +64,6 @@
 		1F9DE66225A668580009B62C /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		1F9DE66E25A6779D0009B62C /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		1F9DE67325A677D70009B62C /* UsernameSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsernameSingleton.swift; sourceTree = "<group>"; };
-		1F9DE6A025A68EFD0009B62C /* WelcomeViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewUITests.swift; sourceTree = "<group>"; };
 		1F9DE6A825A775D50009B62C /* Dependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependencies.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -140,7 +138,7 @@
 		1F9DE60F25A523AE0009B62C /* BetWorksTests */ = {
 			isa = PBXGroup;
 			children = (
-				1F9DE61025A523AE0009B62C /* BetWorksTests.swift */,
+				1F9DE61025A523AE0009B62C /* LoginViewModelTests.swift */,
 				1F9DE61225A523AE0009B62C /* Info.plist */,
 			);
 			path = BetWorksTests;
@@ -150,7 +148,6 @@
 			isa = PBXGroup;
 			children = (
 				1F9DE61B25A523AE0009B62C /* LoginViewUITests.swift */,
-				1F9DE6A025A68EFD0009B62C /* WelcomeViewUITests.swift */,
 				1F9DE61D25A523AE0009B62C /* Info.plist */,
 			);
 			path = BetWorksUITests;
@@ -343,7 +340,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F9DE61125A523AE0009B62C /* BetWorksTests.swift in Sources */,
+				1F9DE61125A523AE0009B62C /* LoginViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,7 +349,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F9DE61C25A523AE0009B62C /* LoginViewUITests.swift in Sources */,
-				1F9DE6A125A68EFD0009B62C /* WelcomeViewUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

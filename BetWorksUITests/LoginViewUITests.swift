@@ -1,6 +1,6 @@
 //
-//  BetWorksUITests.swift
-//  BetWorksUITests
+//  LoginViewUITests.swift
+//  LoginViewUITests
 //
 //  Created by Noah budarf on 2021-01-05.
 //
