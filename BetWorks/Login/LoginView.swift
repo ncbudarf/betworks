@@ -20,80 +20,84 @@ enum ViewPaddingValues: CGFloat {
 
 struct LoginView: View {
 
-	@ObservedObject var loginVewModel: LoginVewModel = LoginVewModel()
+	@ObservedObject var loginViewModel: LoginViewModel = LoginViewModel()
 
     var body: some View {
 
 		NavigationView {
 			VStack {
-				NavigationLink(destination: WelcomeBackView(), tag: ViewSelectionTitles.welcomeBackView.rawValue, selection: $loginVewModel.selection) {}
+				NavigationLink(destination: WelcomeBackView(), tag: ViewSelectionTitles.welcomeBackView.rawValue, selection: $loginViewModel.selection) {}
 
-				GenericTextView(text: loginVewModel.welcomeBackText )
-
-				ZStack(alignment: .leading) {
-					Rectangle()
-						.foregroundColor(.gray)
-						.padding()
-
-					if loginVewModel.username.isEmpty {
-						Text(loginVewModel.usernameText)
-							.foregroundColor(.black)
-							.padding()
-							.padding([.leading, .trailing], ViewPaddingValues.tenPoints.rawValue)
-							.font(Font.system(size: ViewPaddingValues.twentyPoints.rawValue, design: .default))
-					}
-					TextField("", text: $loginVewModel.username)
-						.padding()
-						.padding([.leading, .trailing], ViewPaddingValues.tenPoints.rawValue)
-						.font(Font.system(size: ViewPaddingValues.twentyPoints.rawValue, design: .default))
-				}.aspectRatio(ViewPaddingValues.aspectRatioFourPoints.rawValue, contentMode: .fit)
+				GenericTextView(text: loginViewModel.welcomeBackText )
+					.accessibility(identifier: "WELCOME_BACK_TEXT")
 
 				ZStack(alignment: .leading) {
 					Rectangle()
 						.foregroundColor(.gray)
 						.padding()
 
-					if loginVewModel.password.isEmpty {
-						Text(loginVewModel.passwordText)
+					if loginViewModel.username.isEmpty {
+						Text(loginViewModel.usernameText)
 							.foregroundColor(.black)
 							.padding()
 							.padding([.leading, .trailing], ViewPaddingValues.tenPoints.rawValue)
 							.font(Font.system(size: ViewPaddingValues.twentyPoints.rawValue, design: .default))
 					}
-					SecureField("", text: $loginVewModel.password)
+					TextField("", text: $loginViewModel.username)
 						.padding()
 						.padding([.leading, .trailing], ViewPaddingValues.tenPoints.rawValue)
 						.font(Font.system(size: ViewPaddingValues.twentyPoints.rawValue, design: .default))
 				}.aspectRatio(ViewPaddingValues.aspectRatioFourPoints.rawValue, contentMode: .fit)
+				.accessibility(identifier: "USERNAME_FIELD")
+
+				ZStack(alignment: .leading) {
+					Rectangle()
+						.foregroundColor(.gray)
+						.padding()
+
+					if loginViewModel.password.isEmpty {
+						Text(loginViewModel.passwordText)
+							.foregroundColor(.black)
+							.padding()
+							.padding([.leading, .trailing], ViewPaddingValues.tenPoints.rawValue)
+							.font(Font.system(size: ViewPaddingValues.twentyPoints.rawValue, design: .default))
+					}
+					SecureField("", text: $loginViewModel.password)
+						.padding()
+						.padding([.leading, .trailing], ViewPaddingValues.tenPoints.rawValue)
+						.font(Font.system(size: ViewPaddingValues.twentyPoints.rawValue, design: .default))
+				}.aspectRatio(ViewPaddingValues.aspectRatioFourPoints.rawValue, contentMode: .fit)
+				.accessibility(identifier: "PASSWORD_FIELD")
 
 				Button(action: {
 
-					guard !loginVewModel.username.isEmpty,
-						  !loginVewModel.password.isEmpty
+					guard !loginViewModel.username.isEmpty,
+						  !loginViewModel.password.isEmpty
 					else {
-						self.loginVewModel.showingWeakUsernamePasswordAlert = true
+						self.loginViewModel.showingWeakUsernamePasswordAlert = true
 						return
 					}
 
-					let loginResponse: LoginResponse = MockNetworkLayer().validateLogin(loginVewModel.username, loginVewModel.password)
+					let loginResponse: LoginResponse = MockNetworkLayer().validateLogin(loginViewModel.username, loginViewModel.password)
 
 					if loginResponse.isSuccessful {
 						UsernameSingleton.shared.username = loginResponse.username
-						self.loginVewModel.selection = ViewSelectionTitles.welcomeBackView.rawValue
+						self.loginViewModel.selection = ViewSelectionTitles.welcomeBackView.rawValue
 					} else {
-						self.loginVewModel.showingWeakUsernamePasswordAlert = true
+						self.loginViewModel.showingWeakUsernamePasswordAlert = true
 					}
 				}) {
-					Text(loginVewModel.loginText)
+					Text(loginViewModel.loginText)
 						.padding()
 						.padding([.leading, .trailing], ViewPaddingValues.tenPoints.rawValue)
 						.frame(minWidth: 0, maxWidth: .infinity)
 				}.foregroundColor(.white)
 				.background(Color.accentColor)
 				.padding()
-				.alert(isPresented: $loginVewModel.showingWeakUsernamePasswordAlert) {
-					Alert(title: Text(loginVewModel.alertTitleText), message: Text(loginVewModel.alertMessageText), dismissButton: .default(Text(loginVewModel.alertDismissText)))
-						}
+				.accessibility(identifier: "LOGIN_BUTTON")
+				.alert(isPresented: $loginViewModel.showingWeakUsernamePasswordAlert) {
+					Alert(title: Text(loginViewModel.alertTitleText), message: Text(loginViewModel.alertMessageText), dismissButton: .default(Text(loginViewModel.alertDismissText)))
+				}
 
 				Spacer()
 
@@ -101,6 +105,7 @@ struct LoginView: View {
 			.padding([.leading, .trailing], ViewPaddingValues.fourtyPoints.rawValue)
 		}.navigationBarTitle("")
 		.navigationBarHidden(true)
+		.accessibility(identifier: "LOGIN_VIEW")
     }
 }
 

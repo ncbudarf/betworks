@@ -1,5 +1,5 @@
 //
-//  LoginVewModel.swift
+//  LoginViewModel.swift
 //  BetWorks
 //
 //  Created by Noah budarf on 2021-01-06.
@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-protocol LoginVewModelProtocol {
+protocol LoginViewModelProtocol {
 	var username: String { get }
 	var password: String { get }
 	var selection: String? { get }
@@ -24,7 +24,7 @@ protocol LoginVewModelProtocol {
 	var alertDismissText: String { get }
 }
 
-class LoginVewModel: ObservableObject, LoginVewModelProtocol {
+class LoginViewModel: ObservableObject, LoginViewModelProtocol {
 	@Published var username: String = ""
 	@Published var password: String = ""
 	@Published var selection: String? = nil

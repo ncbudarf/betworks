@@ -22,6 +22,7 @@ struct WelcomeBackView: View {
 			.padding([.leading, .trailing], ViewPaddingValues.fourtyPoints.rawValue)
 		}.navigationBarTitle("")
 		.navigationBarHidden(true)
+		.accessibility(identifier: "WELCOME_VIEW")
 	}
 }
 
