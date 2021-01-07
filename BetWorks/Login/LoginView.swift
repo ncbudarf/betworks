@@ -78,14 +78,7 @@ struct LoginView: View {
 						return
 					}
 
-					let loginResponse: LoginResponse = MockNetworkLayer().validateLogin(loginViewModel.username, loginViewModel.password)
-
-					if loginResponse.isSuccessful {
-						UsernameSingleton.shared.username = loginResponse.username
-						self.loginViewModel.selection = ViewSelectionTitles.welcomeBackView.rawValue
-					} else {
-						self.loginViewModel.showingWeakUsernamePasswordAlert = true
-					}
+					loginViewModel.mockNetworkRequest()
 				}) {
 					Text(loginViewModel.loginText)
 						.padding()

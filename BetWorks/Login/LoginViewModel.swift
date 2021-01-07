@@ -22,6 +22,8 @@ protocol LoginViewModelProtocol {
 	var alertTitleText: String { get }
 	var alertMessageText: String { get }
 	var alertDismissText: String { get }
+
+	func mockNetworkRequest()
 }
 
 class LoginViewModel: ObservableObject, LoginViewModelProtocol {
@@ -38,5 +40,16 @@ class LoginViewModel: ObservableObject, LoginViewModelProtocol {
 	var alertTitleText: String = "Username or Password Error"
 	var alertMessageText: String = "Usernames and Passwords must contain atleast one letter and number"
 	var alertDismissText: String = "OK"
+
+	func mockNetworkRequest() {
+		let loginResponse: LoginResponse = MockNetworkLayer().validateLogin(username, password)
+
+		if loginResponse.isSuccessful {
+			UsernameSingleton.shared.username = loginResponse.username
+			selection = ViewSelectionTitles.welcomeBackView.rawValue
+		} else {
+			showingWeakUsernamePasswordAlert = true
+		}
+	}
 	
 }
