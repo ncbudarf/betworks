@@ -8,48 +8,58 @@
 import Foundation
 import SwiftUI
 
-protocol LoginViewModelProtocol {
-	var username: String { get }
-	var password: String { get }
-	var selection: String? { get }
-	var showingWeakUsernamePasswordAlert: Bool { get }
+class LoginViewModel: ObservableObject {
+	private let networkLayer: MockNetworkLayer
+	private let usernameSingleton: UsernameSingleton
 
-	var welcomeBackText: String { get }
-	var usernameText: String { get }
-	var passwordText: String { get }
-	var loginText: String { get }
+	init(dependencies: Dependencies = Dependencies.shared) {
+		networkLayer = dependencies.networkLayer
+		usernameSingleton = dependencies.usernameSingleton
+	}
 
-	var alertTitleText: String { get }
-	var alertMessageText: String { get }
-	var alertDismissText: String { get }
-
-	func mockNetworkRequest()
-}
-
-class LoginViewModel: ObservableObject, LoginViewModelProtocol {
 	@Published var username: String = ""
 	@Published var password: String = ""
 	@Published var selection: String? = nil
 	@Published var showingWeakUsernamePasswordAlert: Bool = false
 
-	var welcomeBackText: String = "Welcome To Firefly!"
-	var usernameText: String = "Username"
-	var passwordText: String = "Password"
-	var loginText: String = "Login"
+	let welcomeBackText: String = "Welcome To Firefly!"
+	let usernameText: String = "Username"
+	let passwordText: String = "Password"
+	let loginText: String = "Login"
 
-	var alertTitleText: String = "Username or Password Error"
-	var alertMessageText: String = "Usernames and Passwords must contain atleast one letter and number"
-	var alertDismissText: String = "OK"
+	let alertTitleText: String = "Username or Password Error"
+	let alertMessageText: String = "Usernames and Passwords must contain atleast one letter and number"
+	let alertDismissText: String = "OK"
 
 	func mockNetworkRequest() {
-		let loginResponse: LoginResponse = MockNetworkLayer().validateLogin(username, password)
-
-		if loginResponse.isSuccessful {
-			UsernameSingleton.shared.username = loginResponse.username
-			selection = ViewSelectionTitles.welcomeBackView.rawValue
-		} else {
+		guard validate(input: username),
+			  validate(input: password)
+		else {
 			showingWeakUsernamePasswordAlert = true
+			return
 		}
+
+		networkLayer.postLogin(username, password, completion: { result in
+			switch result {
+				case .success(let loginResponse):
+					self.usernameSingleton.username = loginResponse.username
+					self.selection = ViewSelectionTitles.welcomeBackView.rawValue
+				case .failure(let error):
+					print(error.localizedDescription)
+					self.showingWeakUsernamePasswordAlert = true
+				}
+		})
+	}
+
+	private func validate(input: String) -> Bool {
+		guard input.count >= 2,
+			  input.rangeOfCharacter(from: NSCharacterSet.letters) != nil,
+			  input.rangeOfCharacter(from: CharacterSet.decimalDigits) != nil
+		else {
+			return false
+		}
+
+		return true
 	}
 	
 }

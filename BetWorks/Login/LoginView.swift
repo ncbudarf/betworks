@@ -20,7 +20,7 @@ enum ViewPaddingValues: CGFloat {
 
 struct LoginView: View {
 
-	@ObservedObject var loginViewModel: LoginViewModel = LoginViewModel()
+	@ObservedObject var loginViewModel: LoginViewModel = LoginViewModel(dependencies: Dependencies())
 
     var body: some View {
 

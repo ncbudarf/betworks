@@ -6,34 +6,18 @@
 //
 
 import Foundation
+import Combine
 
-final class MockNetworkLayer {
-	func validateLogin(_ username: String, _ password: String) ->  LoginResponse {
-		let jsonData = JSONResponse(username, password).data(using: .utf8)!
-		let loginResponse: LoginResponse = try! JSONDecoder().decode(LoginResponse.self, from: jsonData)
-		return loginResponse
-	}
+protocol NetworkManager {
+	func postLogin(_ username: String, _ password: String, completion: @escaping (Result<LoginResponse, Error>) -> Void)
+}
 
-	private func JSONResponse(_ username: String, _ password: String) -> String {
-		let isSuccessful = validate(input: username) && validate(input: password)
-
-		let response = """
-		{
-			"isSuccessful": \(isSuccessful),
-			"username": "\(username)",
+final class MockNetworkLayer: NetworkManager {
+	func postLogin(_ username: String, _ password: String, completion: @escaping (Result<LoginResponse, Error>) -> Void) {
+		DispatchQueue.main.async {
+			let loginResponse = LoginResponse(isSuccessful: true, username: username)
+			let result: Result<LoginResponse, Error> = .success(loginResponse)
+			completion(result)
 		}
-		"""
-		return response
-	}
-
-	private func validate(input: String) -> Bool {
-		guard input.count >= 2,
-			  input.rangeOfCharacter(from: NSCharacterSet.letters) != nil,
-			  input.rangeOfCharacter(from: CharacterSet.decimalDigits) != nil
-		else {
-			return false
-		}
-
-		return true
 	}
 }

@@ -23,6 +23,7 @@
 		1F9DE67425A677D70009B62C /* UsernameSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9DE67325A677D70009B62C /* UsernameSingleton.swift */; };
 		1F9DE69925A68CB70009B62C /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9DE60025A523AB0009B62C /* LoginView.swift */; };
 		1F9DE6A125A68EFD0009B62C /* WelcomeViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9DE6A025A68EFD0009B62C /* WelcomeViewUITests.swift */; };
+		1F9DE6A925A775D50009B62C /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9DE6A825A775D50009B62C /* Dependencies.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		1F9DE66E25A6779D0009B62C /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		1F9DE67325A677D70009B62C /* UsernameSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsernameSingleton.swift; sourceTree = "<group>"; };
 		1F9DE6A025A68EFD0009B62C /* WelcomeViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewUITests.swift; sourceTree = "<group>"; };
+		1F9DE6A825A775D50009B62C /* Dependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependencies.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +163,7 @@
 				1F9DE63725A58C4D0009B62C /* GenericTextView.swift */,
 				1F9DE66225A668580009B62C /* LoginViewModel.swift */,
 				1F9DE67325A677D70009B62C /* UsernameSingleton.swift */,
+				1F9DE6A825A775D50009B62C /* Dependencies.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F9DE6A925A775D50009B62C /* Dependencies.swift in Sources */,
 				1F9DE64A25A58DF00009B62C /* WelcomeBackView.swift in Sources */,
 				1F9DE67425A677D70009B62C /* UsernameSingleton.swift in Sources */,
 				1F9DE64025A58D390009B62C /* LoginButton.swift in Sources */,

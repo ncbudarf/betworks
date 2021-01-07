@@ -7,10 +7,6 @@
 
 import Foundation
 
-protocol WelcomeBackViewModelProtocol {
-	var welcomeBackText: String { get }
-}
-
-class WelcomeBackViewModel: WelcomeBackViewModelProtocol {
-	var welcomeBackText = "Welcome Back"
+class WelcomeBackViewModel {
+	let welcomeBackText = "Welcome Back"
 }

@@ -10,5 +10,5 @@ import SwiftUI
 
 class UsernameSingleton: ObservableObject {
 	static let shared = UsernameSingleton()
-	var username: String = ""
+	@Published var username: String = ""
 }
